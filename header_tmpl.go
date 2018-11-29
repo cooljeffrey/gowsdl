@@ -10,7 +10,7 @@ package {{.}}
 import (
 	"encoding/xml"
 	"time"
-	"github.com/hooklift/gowsdl/soap"
+	"github.com/cooljeffrey/gowsdl/soap"
 
 	{{/*range .Imports*/}}
 		{{/*.*/}}
@@ -20,4 +20,7 @@ import (
 // against "unused imports"
 var _ time.Time
 var _ xml.Name
+
+type PositiveInteger uint64
+
 `

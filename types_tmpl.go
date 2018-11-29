@@ -87,6 +87,10 @@ var typesTmpl = `
 
 	{{range .Elements}}
 		{{if not .Type}}
+			{{if not .ComplexType}}
+			type {{.Name | replaceReservedWords | makePublic}} struct {
+			}
+			{{end}}
 			{{/* ComplexTypeLocal */}}
 			{{$name := .Name}}
 			{{with .ComplexType}}
